@@ -1,9 +1,9 @@
 # config valid only for current version of Capistrano
-lock "3.5.0"
+lock "3.11.0"
 
 set :application, "learning"
 set :repo_url, "git@github.com:devtuananh/learning.git"
-set :pty, true
+set :pty, false
 set :linked_files, %w(config/database.yml config/application.yml)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
 set :keep_releases, 5

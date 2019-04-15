@@ -10,7 +10,7 @@
 set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/deploy/apps/learning"
-set :branch, :config_deploy
+set :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 server "107.23.6.136", user: "www", roles: %w(web app db)
 
 # role-based syntax
