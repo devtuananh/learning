@@ -1,0 +1,31 @@
+<% provide :title, t(".title", course: @course.name)%>
+
+<div class="content-wrapper">
+  <div class="course-card col-lg-9">
+    <strong><%= @course.name %></strong> <%= training_time(@course) %>
+    <% @subjects.each do |subject| %>
+      <div class="card subject-card">
+        <div class="subject-title">
+          <%= subject.name %>
+        </div>
+        <% subject.tasks.each do |task| %>
+          <div class="task-card row">
+            <div class="col-md-11">
+              <i class="fa fa fa-leanpub" style="color: blue">
+              </i>&nbsp;
+              <%= link_to task.name, task_path(task), class: "task-name" %>
+            </div>
+          </div>
+        <% end %>
+        <% subject.exams.each do |exam| %>
+          <div class="task-card row">
+            <div class="col-md-11">
+              <i class="fa fa-file-text" style="color: blue"></i>&nbsp;
+              <%= link_to exam.title, exam_details_path(exam) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

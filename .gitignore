@@ -1,0 +1,45 @@
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+config/initializers/secret_token.rb
+config/master.key
+config/database.yml
+
+.env
+
+/.bundle
+/vendor/bundle
+.rvmrc
+
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+# /app/assets/images/
+/public/uploads/
+.powenv
+
+.byebug_history
+
+/test
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore application configuration
+/config/application.yml

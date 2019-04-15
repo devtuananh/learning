@@ -1,0 +1,26 @@
+<div class="form-group">
+  <%= f.hidden_field :course_id, value: @course.id %>
+  <%= f.label :name, t(".subject"), class:"required" %>&nbsp;
+  <%= f.text_field :name, class: "form-group form-control", required: true %>
+</div>
+
+<div class="form-group">
+    <%= f.label :description, t(".description"), class:"required" %>
+    <%= f.text_area :description, class: "form-group form-control", required: true %>
+</div>
+
+<div class="form-group">
+  <%= f.label :start_time, class: "required" %>
+  <%= f.date_field :start_time, required: true, class:"datepicker form-control" %>
+  <div align="right" class="error-messages-devise" >
+    <%= @subject.errors.full_messages_for(:start_time).first %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :end_time, class: "required" %>
+  <%= f.date_field :end_time, required: true, class:"datepicker form-control" %>
+  <div align="right" class="error-messages-devise" >
+    <%= @subject.errors.full_messages_for(:end_time).first %>
+  </div>
+</div>

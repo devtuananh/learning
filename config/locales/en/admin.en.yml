@@ -1,0 +1,81 @@
+en:
+  admin:
+    users:
+      create:
+        add_success: "Add user %{name} success"
+        add_fail: "Add new user error. Please recheck information!"
+      update:
+        success: "Update user information success"
+        fail: "Add new user error. Please recheck information!"
+      destroy:
+        success: "Delete this user success"
+        warning: "Don't delete this user. Please recheck information!"
+      check_supervisor:
+        not_permission: "You not permission access page"
+      load_user:
+        not_found: "Not found user"
+      index:
+        manage_user: "Manage Users"
+        create_user: "New User"
+        search: "Search"
+        not_permission: "You not permission access page"
+        email: "Email"
+        name: "Name"
+        phone: "Phone"
+        address: "Address"
+        avatar: "Avatar"
+        role: "Role"
+        action: "Action"
+      new:
+        email: "email"
+        password: "New Password"
+        password_length: "(%{length} characters minimum)"
+        name: "name"
+        phone: "phone"
+        address: "address"
+        avatar: "avatar"
+        create_user: "Create user"
+      user:
+        delete: "Delete"
+        confirm: "You are sure to delete this user?"
+        edit: "Edit"
+        view: "View"
+      edit:
+        edit_user: "Edit user"
+    courses:
+      not_found_course: "Course not found!"
+      index:
+        title: "Manage Courses"
+        add_course: "New course"
+        course: "Course"
+        subject: "Subject"
+        edit: "Edit"
+        delete: "Delete"
+        detail: "Course Detail"
+        action: "Action"
+        confirm: "Are you sure?"
+        add_a_subject: "A new subject"
+        confirm: "Are you sure?"
+        add_a_subject: "A new subject"
+        edit_subject: "Edit subject"
+        del_subject: "Delete subject"
+        detail_subject: "Detail subject"
+        edit_subject: "Edit subject"
+        del_subject: "Delete subject"
+        detail_subject: "Detail subject"
+        finish_course: "Finish course"
+        finish_subject: "Finish subject"
+      show:
+        title: "Manage Course %{name}"
+        course_detail: "Course"
+        view: "Views"
+        suppervisor_course: "Suppervisor"
+        trainee_course: "Trainee"
+        add_subject: "Add subject"
+        edit_subject: "Edit subject"
+        del_subject: "Delete subject"
+        edit_task: "Edit task"
+        del_task: "Delete task"
+        exam: "Exam"
+        task: "Task"
+        not_found: "This course not exist!"

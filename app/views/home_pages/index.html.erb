@@ -1,0 +1,77 @@
+<%= provide :title, t(".home") %>
+<div class="content-wrapper">
+  <div class="member">
+    <div class="container-member">
+      <div class="left-info-member">
+        <div>
+          <% if user_signed_in? %>
+            <div class="avt">
+              <%= image_tag get_avatar(current_user), class:"avatar" %>
+            </div>
+          <% end %>
+          <div class="detail-user">
+            <div class="username"><%= current_user.name %></div>
+            <div class="email"><%= current_user.email %></div>
+          </div>
+        </div>
+      </div>
+      <% if current_user.supervisor? %>
+        <div class="right-info-member">
+          <div class="count-course">
+            <div class="count"><%= @supervisor_courses.length %></div>
+            <div class="lable-course"><%= t ".label_course" %></div>
+          </div>
+        </div>
+      <% else %>
+        <div class="right-info-member">
+          <div class="count-course">
+            <div class="count"><%= @my_courses.length %></div>
+            <div class="lable-course"><%= t ".label_course" %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% if current_user.trainee? %>
+    <div class="our-webcoderskull tests" id="info-course">
+      <ul class="row">
+        <% @my_courses.each do |my_course| %>
+          <li class="col-12 col-md-6 col-lg-3">
+            <div class="cnt-block equal-hight">
+              <%= image_tag get_image(my_course), style:"width:100%" %>
+              <h3><%= truncate my_course.name, length: 24 %></h3>
+              <p><%= truncate my_course.description, length: 54 %></p>
+              <ul class="follow-us clearfix">
+                <li><%= link_to t(".learn"), learn_path(my_course.id), class:"btn btn-success"%></li>
+                <li>
+                <%= form_for my_course.user_courses.find_by(user_id: current_user.id), html: {method: :delete} do |f| %>
+                  <%= hidden_field_tag :user_id, current_user.id %>
+                  <%= hidden_field_tag :course_id, my_course.id %>
+                  <%= f.submit t(".unenroll"), class: "btn btn-info", data: { confirm: 'Are you sure you want to unenroll this course?' } %>
+                <% end %>
+              </li>
+              </ul>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+      <div class="our-webcoderskull tests" id="info-course">
+        <ul class="row">
+          <% @supervisor_courses.each do |course| %>
+            <li class="col-12 col-md-6 col-lg-3">
+              <div class="cnt-block equal-hight">
+                <%= image_tag get_image(course), style:"width:100%" %>
+                <h3><%= truncate course.name, length: 24 %></h3>
+                <p><%= truncate course.description, length: 54 %></p>
+                <ul class="follow-us clearfix">
+                  <li><%= link_to t(".manage_course"), supervisor_course_path(course), class:"btn btn-info" %></li>
+                </ul>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+</div>

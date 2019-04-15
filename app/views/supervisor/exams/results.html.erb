@@ -1,0 +1,40 @@
+<% provide :title, t(".title", title: @exam.title) %>
+<div class="content-wrapper">
+  <div class="col-md-12">
+    <h3><strong><%= t ".do_exam", title: @exam.title %></strong></h3>
+    <br>
+    <center>
+    <%= t ".open_exam" %> <%= l @exam.created_at, format: :time_test %><br>
+    <%= t ".time_exam" %><br>
+    <%= t ".grading" %><br>
+    </center>
+  </div>
+<br>
+  <table class="table">
+    <thead>
+      <tr class="d-flex">
+        <th class="col-3"><%= t ".user_name" %></th>
+        <th class="col-3"><%= t ".last_time" %></th>
+        <th class="col-3"><%= t ".score" %></th>
+        <th class="col-2"><%= t ".views" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @trainee_on_tests.each_with_index do |user|%>
+          <tr class="d-flex">
+            <td class="col-3"><%= user.user.name %></td>
+            <% @test = user.user.tests.where(exam_id: @exam.id).last %>
+            <% if @test.present? %>
+              <td class="col-3"><%= l @test.created_at, format: :time_test %></td>
+              <td class="col-3"><%= Test.where(user_id: user.trainee_id, exam_id: @exam.id).average(:score).round(2) %></td>
+              <td class="col-3"><%= link_to t(".view"), supervisor_exam_test_path(@exam, @test) %></td>
+            <% else %>
+              <td class="col-3"><%= t(".not_test") %></td>
+              <td class="col-3">0.0</td>
+              <td class="col-3"><%= t(".not_test") %></td>
+            <% end %>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

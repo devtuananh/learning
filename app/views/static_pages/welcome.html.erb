@@ -1,0 +1,21 @@
+<div class="content-wrapper" id="info-course">
+  <div class="row justify-content-center search-form">
+    <%= search_form_for @q do |f| %>
+      <div class="inner-form">
+        <div class="input-field first-wrap">
+          <%= f.search_field :name_cont, id:"search" %>
+        </div>
+        <div class="input-field third-wrap">
+          <%= f.submit t(".search"), class:"btn-search" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br><br>
+  <div id="courses">
+    <%= render "static_pages/course" %>
+  </div>
+  <div class="d-flex justify-content-center" id="paginator">
+    <%= paginate @courses, theme: "twitter-bootstrap-4", remote: true%>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<li class="col-12 col-md-6 col-lg-3">
+  <div class="cnt-block equal-hight">
+    <%= image_tag get_image(course), style:"width:100%" %>
+    <h3 title="<%= course.name %>"><%= truncate course.name, length: 24 %></h3>
+    <p title="<%= course.description %>"><%= truncate course.description, length: 54 %></p>
+    <ul class="follow-us clearfix">
+      <li>
+        <% if @user.trainee? %>
+          <%= link_to t(".learn"), learn_path(course), class:"btn btn-success" %>
+        <% else %>
+          <%= link_to t(".view"), supervisor_course_path(course), class:"btn btn-success" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</li>

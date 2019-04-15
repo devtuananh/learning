@@ -1,0 +1,70 @@
+.container-fluid {
+  padding: 0 30px 25px;
+}
+
+.learn{
+  margin-left:50px;
+  margin-right:50px;
+}
+
+.title{
+  margin-bottom:20px;
+}
+
+.instruction{
+  text-align: center;
+}
+
+.new-object{
+  margin-bottom:10px;
+}
+
+.fa-trash {
+  color: $red;
+}
+.badge-danger{
+  .fa-trash {
+    color: $white;
+  }
+}
+.inc, .made_in, .located {
+  display: inline-block;
+  font-size: 0.875rem;
+  width: 30%;
+}
+
+.flash {
+  margin: auto;
+}
+
+.error {
+  margin: auto;
+}
+
+h3, h4 {
+  text-align: center;
+}
+
+.alert-notice {
+  background-color: $hintOfGreen;
+  border-color: frostee;
+  color: $killarney;
+  text-align: left;
+}
+
+label.required:after{
+  content: " *";
+  color: $red;
+}
+.reply-form{
+  .avatar{
+    width: 15%;
+  }
+  .content{
+    width: 70%;
+
+  }
+  .submit{
+    width: 15%;
+  }
+}

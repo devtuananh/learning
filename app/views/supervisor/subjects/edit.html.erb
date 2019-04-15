@@ -1,0 +1,14 @@
+<% provide :title, t(".title") %>
+<div class="content-wrapper">
+  <%= form_for [:supervisor, @course, @subject] do |f| %>
+    <div class="row">
+      <div class="login-form col-md-4 offset-md-4">
+        <h4><%= t ".edit_subject" %></h4>
+        <%= render "form_subject", f: f %>
+        <div class="actions form-group">
+          <%= f.submit t(".edit"), class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

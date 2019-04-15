@@ -1,0 +1,38 @@
+<% provide :title, t(".edit_user") %>
+<h3><%= t(".edit_user") %></h3>
+<div class="content-wrapper">
+  <div class="row">
+    <div class="login-form col-md-4 offset-md-4">
+      <%= form_for [:admin, @user] do |f| %>
+        <div class="field form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:email).first %>
+          </div>
+        </div>
+
+        <div class="field form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:name).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :role, t(".role") %><span class="validate-alert"> *</span>
+          <%= f.select :role, role_collection, {}, class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:role).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit t(".edit_user"), class:"btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  </div>
+</div>

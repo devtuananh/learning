@@ -1,0 +1,79 @@
+en:
+  supervisor:
+    exams:
+      form_exam:
+        create_exam: "Create Exam"
+        title: "Title"
+        number_question: "Number Question"
+        create: "Create"
+      edit:
+        edit_exam: "Edit Exam"
+        title: "Title"
+        number_question: "Number Question"
+        save: "Save"
+      index:
+        title: "Manage Exams"
+        exam: "Title Exam"
+        subject: "Subject"
+        action: "Action"
+        show: "Exam details"
+        edit: "Edit exam"
+        delete: "Delete exam"
+        confirm: "Are you sure delete this exam?"
+        add_question: "Add Question"
+      show:
+        title: "Manage Questions Of Exam %{title}"
+        content: "Content"
+        action: "Action"
+        show: "Question details"
+        edit: "Edit question"
+        delete: "Delete question"
+        confirm: "Are you sure delete this question?"
+        add_question: "Add Question"
+      create:
+        success: "You create new exam successfully!"
+        failed: "You create new exam failed!"
+      update:
+        success: "You update this exam successfully!"
+        failed: "You update this exam failed!"
+      destroy:
+        success: "You delete this exam successfully!"
+        failed: "You delete this exam failed!"
+      results:
+        title: "Results of Exam %{title}"
+        do_exam: "Results of Exam %{title}"
+        open_exam: "Bài thi được mở lúc"
+        time_exam: "Thời gian làm bài: 40 phút"
+        grading: "Grading method: Lần cao nhất"
+        user_name: "Name trainee"
+        score: "Score"
+        date: "Date"
+        views: "View Details"
+        view: "View"
+    questions:
+      form_question:
+        question: "Question"
+        add_question: "Create new question"
+        create: "Create question"
+      edit:
+        question: "Question"
+        edit_question: "Edit question"
+        update: "Update"
+      create:
+        success: "You create new question successfully!"
+        failed: "You create new exam failed!"
+      update:
+        success: "You update this exam successfully!"
+        failed: "You update this exam failed!"
+      destroy:
+        success: "You delete this exam successfully!"
+        failed: "You delete this exam failed!"
+      question: "Question"
+    tests:
+      show:
+        view: "View details"
+        not_test: "Not yet tested"
+        title: "Results Test of Exam %{title}"
+        date: "Date"
+        score: "Score"
+        back: "Back"

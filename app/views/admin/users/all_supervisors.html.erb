@@ -1,0 +1,11 @@
+<%= provide :title, t(".title") %>
+
+<h2 class="text-center"><%= t ".title" %></h2>
+<div class="content-wrapper">
+  <div id="paginator">
+    <%= paginate @supervisors, remote: true, theme: "twitter-bootstrap-4" %>
+  </div>
+  <div id="supervisors">
+    <%= render "supervisors" %>
+  </div>
+</div>

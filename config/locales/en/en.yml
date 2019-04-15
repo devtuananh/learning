@@ -1,0 +1,255 @@
+en:
+  ckeditor:
+    page_title: 'CKEditor Files Manager'
+    confirm_delete: 'Delete file?'
+    buttons:
+      cancel: 'Cancel'
+      upload: 'Upload'
+      delete: 'Delete'
+      next: 'Next'
+  enum:
+    user:
+      role:
+        admin: "Admin"
+        supervisor: "Teacher"
+        trainee: "Learner"
+  user:
+    mailer:
+      invite_user: "Invitation Mail"
+      send: "Dear"
+      create_by_admin: "Your account has been create by admin:"
+      email: "Email:"
+      password: "Password:"
+      link: "Website"
+  submit: "Submit"
+  confirm_popup:
+    sure_delete: "Are you sure want to delete."
+    delete_text: "Once you delete it, a data can not be restore"
+    agree_delete: "Yes, delete it!"
+    refuse: "No, cancel!"
+    cancelled: "Cancelled"
+    safe_data: "Your data is safe"
+    error: "error"
+    warning: "warning"
+    btn_success: "btn btn-success"
+    btn_danger: "btn btn-danger"
+    sure_exit: "Are you sure want to exit?"
+    exit_text: "Your content can be discarded"
+    agree_exit: "Yes, exit it!"
+    opp: "Opp...."
+    something_wrong: "Something went wrong! Can't not delete email shared!"
+    update_failed: "Something went wrong! Can't not update email shared!"
+    invalid_user: "Invalid user, Please try again!"
+  base_title: "UET Learning Online"
+  time:
+    formats:
+      own: "%H:%M:%S, %d-%m-%Y"
+      short: "%d/%m/%Y"
+      time_test: "%H:%M %d/%m/%Y"
+  layouts:
+    header:
+      logo: "UET Learning Online"
+      home: "Home"
+      signup: "Sign up"
+      login: "Log in"
+      logout: "Log out"
+      manage_users: "Manage Exams"
+      all_supervisors: "All Supervisors"
+      mycourse: "My courses"
+      manage_courses: "Manage Courses"
+      manage_exams: "Manage Exams"
+      profile: "My Profile"
+      avatar: "Avatar"
+      reset_password: "Reset Password"
+      settings: "Setting"
+      all_accounts: "List accounts"
+      all_members: "All members"
+      notification: "Notifications"
+      trainee_report: "Trainee Report"
+    footer:
+      products: "Products"
+      useful_link: "Useful links"
+      contact: "Contact"
+      link: "Useful links"
+      address: "144 Xuân Thủy, Cầu Giấy, Hà Nội"
+      email: "uet@vnu.edu.vn"
+      tel: "024.37547.461"
+      fax: "024.37547.460"
+      copyright: "© 2018 Copyright"
+  static_pages:
+    welcome:
+      home: "Home"
+      continue_learn: "Continue learning"
+      label_course: "Course"
+      name_course: "Course example"
+      short_description: "This course about...."
+      not_found: "User not found"
+      subject_not_found: "Subject not found!"
+      task_not_found: "Task not found!"
+    course:
+      view_details: "See More"
+  home_pages:
+    index:
+      home: "Home"
+      continue_learn: "Continue learning"
+      label_course: "Course"
+      name_course: "Course example"
+      short_description: "This course about...."
+      not_found: "User not found"
+      subject_not_found: "Subject not found!"
+      task_not_found: "Task not found!"
+      learn: "Learn"
+  users:
+    edit:
+      edit_profile: "Change My Profile"
+      email: "email"
+      update: "Update"
+    avatar:
+      langer_image: "should be less than 5MB"
+  reset_password:
+    edit:
+      change_password: "Change your password"
+      current_password: "Current Password"
+      new_password: "New Password"
+      confirm_new_password: "Confirmation New Password"
+      update: "Update"
+    update:
+      change_password_success: "Change your password success!"
+      change_password_failed: "Change your password failed!"
+  registrations:
+    create:
+      errors: "Register new account failed. Please, you recheck imformation!"
+  user_courses:
+    create:
+      success: "You enroll this course successfully!"
+      failed: "You enroll this course failed!"
+      info: "You has been enroll this course!"
+    destroy:
+      success: "Unroll this course successfully!"
+      failed: "Unroll this course failed!"
+    check_enroll_course:
+  learns:
+    learn: "Learn"
+    show:
+      title: "Course: %{course}"
+      not_found: "This course doesn't exist!"
+      not_permission: "You don't permission access this course!"
+    exam_details:
+      title: "Exam %{title}"
+      do_exam: "Do Exam"
+      open_exam: "Bài thi được mở lúc"
+      time_exam: "Thời gian làm bài: 40 phút"
+      grading: "Grading method: Lần cao nhất"
+      history_test: "Tóm tắt các lần làm bài trước đó"
+      start: "Start do exam"
+  tasks:
+    find_task:
+      not_found: "This task doesn't exist!"
+      not_permission: "You don't permission access this task!"
+    show:
+      not_found: "This task doesn't exist!"
+      not_permission: "You don't permission access this task!"
+      learn_task: "Assignment"
+      discussion: "Discussion"
+    comment_form:
+      submit: "Comment"
+    update:
+      finish: "Finish task"
+      task: "Task"
+      success: "Finish task successfully"
+      failure: "Finish task failure"
+  tests:
+    waitting: "waitting"
+    do_test: "Do Test"
+    view: "View"
+    submit: "Submit"
+    create:
+      success: "You start do exam !!!"
+      failed: "Create test of exam failure"
+    update:
+      submit: "Submit this test success"
+    index:
+      title: "Title"
+      date: "Date"
+      score: "Score"
+      status: "Status"
+      action: "Action"
+    show:
+      title: "Do Exam %{title}"
+      date: "Date"
+      score: "Score"
+      back: "Back"
+    submit:
+      confirm: "Are you ready to take the exam?"
+  comments:
+    comment:
+      commented: "<b>%{user}</b> commented %{time} ago."
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "You sure delete?"
+      reply: "Reply"
+    load_comment:
+       danger: "Not find commnet!"
+    edit:
+      submit: "Save"
+    update:
+      danger: "Update comment not success!"
+    destroy:
+      danger: "Delete this comment not success!"
+    new_reply:
+      submit: "Reply"
+  trainee:
+    users:
+      users:
+        view: "View"
+      show:
+        profile: "Profile"
+        count: "5"
+        completed_course: "Courses completed"
+        quantity_subject: "Subjects"
+      all_users:
+        title: "All members"
+        all_users: "All members"
+        view: "View"
+      message:
+        not_found_member: "Not found this member."
+        not_found: "User not found!"
+    reports:
+      index:
+        daily_report: "Daily Report"
+        new_report: "New report"
+      new:
+        send: "Send"
+        title: "Title"
+        content: "Content"
+        receiver: "Receiver"
+        name: "Name"
+        phone: "Phone number"
+        trainers: "Trainers"
+        sum: "Sum"
+      create:
+        success: "Send report successfully!"
+        failure: "Send report failure!"
+    courses:
+      index:
+        my_courses: "My Courses"
+        course: "Courses"
+        subject: "Subjects"
+        members: "Members"
+        my_progress: "My Progress"
+        course_members: "All Members"
+      show_member:
+        title: "Members of course"
+      show:
+        course: "Course"
+        description: "Description"
+        time: "Time"
+        completed: "Completed"
+  shared:
+    error_messages:
+      form_error_warning:
+        zero: "none"
+        one: "The form contains 1 error"
+        other: "The form contains %{count} errors"
+    error:
+      title: "Errors"

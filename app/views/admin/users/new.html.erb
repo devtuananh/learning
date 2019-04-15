@@ -1,0 +1,78 @@
+<% provide :title, t(".create_user") %>
+<h3><%= t(".create_user") %></h3>
+<div class="content-wrapper">
+  <div class="row">
+    <div class="login-form col-md-4 offset-md-4">
+      <%= form_for [:admin, @user] do |f| %>
+        <div class="form-group">
+          <label><%= t(".email") %>
+            <span class="validate-alert"> *</span>
+          </label>
+          <%= f.email_field :email, autofocus: true, autocomplete: t(".email"),
+            class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:email).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><%= t(".name") %>
+            <span class="validate-alert"> *</span>
+          </label>
+          <%= f.text_field :name, autofocus: true, autocomplete: t(".name"),
+            class:"form-control"  %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:name).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :role, t(".role") %><span class="validate-alert"> *</span>
+          <%= f.select :role, role_collection, {}, class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:role).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><%= t(".phone") %>
+            <span class="validate-alert"> *</span>
+          </label>
+          <%= f.text_field :phone, autofocus: true, autocomplete: t(".phone"), class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:phone).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><%= t(".address") %>
+            <span class="validate-alert"> *</span>
+          </label>
+          <%= f.text_field :address, autofocus: true, autocomplete: t(".address"), class:"form-control" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:address).first %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="fix-bot-pic upload-pic pic-profile">
+            <%= f.hidden_field :avatar_cache %>
+            <%= f.file_field :avatar, accept: "image/jpeg,image/gif,image/png",
+              autofocus: true, class: "input-file previewIMG" %>
+            <label tabindex="0" class="input-file-trigger"> <%= t ".avatar" %>
+              <i class="fa fa-camera"></i>
+            </label>
+          </div>
+          <%= image_tag get_avatar(@user), class: "image_cm preview-img" %>
+          <div align="right" class="error-messages-devise" >
+            <%= @user.errors.full_messages_for(:avatar).first %>
+          </div>
+        </div>
+
+        <div class="actions form-group">
+          <%= f.submit t(".create_user"), class:"btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
